@@ -133,16 +133,52 @@ class ktools:
       self.m()
     self.put()
 
+  def pickmm(self, num):
+    """Pick multiple with spaces in between"""
+    for step in range(num-1):
+      self.pick()
+      self.m()
+      self.m()
+    self.pick()
+
 def main():
     """Karel code goes here!"""
     kt = ktools()
     kt.m()
-    self.m()
-    self.m()
+    kt.m()
+    kt.m()
     kt.m()
     kt.m()
     kt.tl()
-    kt.pickm(4)
+    kt.m()
+    kt.pickmm(4)
+    kt.tl()
+    kt.m()
+    kt.tl()
+    kt.m()
+    kt.pickmm(3)
+    kt.tr()
+    kt.m()
+    kt.tr()
+    kt.m()
+    kt.pickmm(2)
+    kt.tl()
+    kt.m()
+    kt.tl()
+    kt.m()
+    kt.pick()
+    kt.tl()
+    kt.tl()
+    kt.m()
+    kt.m()
+    kt.m()
+    kt.tr()
+    kt.m()
+    kt.m()
+    kt.m()
+    kt.m()
+    kt.tr()
+  
   
     pass
 
