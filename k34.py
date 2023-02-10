@@ -135,7 +135,14 @@ class ktools:
 
 def main():
     """Karel code goes here!"""
-
+    kt = ktools()
+    kt.m()
+    self.m()
+    self.m()
+    kt.m()
+    kt.m()
+    kt.tl()
+    kt.pickm(4)
   
     pass
 
