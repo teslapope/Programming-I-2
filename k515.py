@@ -133,65 +133,52 @@ class ktools:
       self.m()
     self.put()
 
-  def pickmm(self, num):
-    """Pick multiple with spaces in between"""
-    for step in range(num-1):
-      self.pick()
-      self.m()
-      self.m()
-    self.pick()
+  def SOB(self):
+    """Standing on beeper"""
+    return beepers_present()
 
+  def jump(self):
+    """Jump for 510"""
+    while self.fic():
+      self.m()
+    self.tl()
+    while self.rib():
+      self.m()
+    self.tr()
+    self.m()
+    self.tr()
+    while self.fic():
+      self.m()
+    self.tl()
+
+  def find(self):
+    """Find for 515"""
+    while not facing_north():
+      self.tl()
+    self.m()
+    if not self.SOB():
+      self.tl()
+      self.m()
+      self.tl()
+      self.m()
+
+    for _ in range(2):
+      if not self.SOB():
+        self.m()
+        self.tl()
+        self.m()
+    pass
 def main():
     """Karel code goes here!"""
     kt = ktools()
     kt.m()
-    kt.m()
-    kt.m()
-    kt.m()
-    kt.m()
     kt.tl()
-    kt.m()
-    kt.pickmm(4)
-    kt.tl()
-    kt.m()
-    kt.tl()
-    kt.m()
-    kt.pickmm(3)
-    kt.tr()
     kt.m()
     kt.tr()
     kt.m()
-    kt.pickmm(2)
-    kt.tl()
-    kt.m()
-    kt.tl()
-    kt.m()
-    kt.pick()
-    kt.tl()
-    kt.tl()
-    kt.m()
-    kt.m()
-    kt.m()
-    kt.tr()
-    kt.m()
-    kt.m()
-    kt.m()
-    kt.m()
-    kt.tr()
-    kt.m()
-    kt.pickmm(3)
-    kt.tl()
-    kt.m()
-    kt.tl()
-    kt.m()
-    kt.pickmm(2)
-    kt.tr()
-    kt.m()
-    kt.tr()
-    kt.m()
-    kt.pick()
-  
-    pass
-
+    while kt.SOB():
+      kt.pick()
+      kt.find()
+pass
 if __name__ == "__main__":
     run_karel_program()
