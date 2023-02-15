@@ -71,22 +71,72 @@ class ktools:
   
   def e(self):
     """Print E using beepers"""
+    self.tl()
+    self.put5()
+    self.tr()
+    self.m()
+    self.put2()
+    self.ta()
+    self.m()
+    self.m()
+    self.tl()
+    self.m()
+    self.m()
+    self.tl()
+    self.m()
+    self.put2()
+    self.ta()
+    self.m()
+    self.m()
+    self.tl()
+    self.m()
+    self.m()
+    self.tl()
+    self.m()
+    self.put2()
+    self.m()
+    self.m()
     pass
-    
   def l(self):
     """Print L using beepers"""
+    self.tl()
+    self.put5()
+    self.ta()
+    self.m()
+    self.m()
+    self.m()
+    self.m()
+    self.tl()
+    self.m()
+    self.put2()
+    self.m()
+    self.m()
     pass
-    
   def o(self):
     """Print O using beepers"""
+    self.tl()
+    self.put5()
+    self.tr()
+    self.m()
+    self.put2()
+    self.m()
+    self.tr()
+    self.put5()
+    self.tr()
+    self.m()
+    self.put2()
+    self.ta()
+    self.m()
+    self.m()
+    self.m()
+    self.m()
     pass
-    
-  
 def main():
     """Karel code goes here!"""
     kt = ktools()
     kt.h()
     kt.e()
+    kt.l()
     kt.l()
     kt.o()
     pass
